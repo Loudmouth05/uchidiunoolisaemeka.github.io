@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #data-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="data-container">
+        <h1 data-testid="slackUserName">Uchidiuno Olisaemeka</h1>
+        <picture>
+            <source srcset="https://ca.slack-edge.com/T05FFAA91JP-U05RB15H0NP-ab3ec5fe3086-480" media="(min-width: 1024px)">
+            <source srcset="https://ca.slack-edge.com/T05FFAA91JP-U05RB15H0NP-ab3ec5fe3086-320" media="(min-width: 768px)">
+            <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RB15H0NP-ab3ec5fe3086-48" alt="Description of the image">
+          </picture> 
+        <p data-testid="age">24 years old</p>
+        <p data-testid="location">Abuja, Nigeria</p>
+        <p data-testid="myTrack">Frontend</p>
+        <a href="https://github.com/Loudmouth05/hngxStage1/blob/main/Untitled-1.html">Source Code</a>
+        <p data-testid="currentUTCTime"></p>
+    </div>
+
+    <script>
+        function updatecurrentUTCTime() {
+            const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+            const now = new Date();
+            const formattedTime = now.toLocaleString();
+            currentUTCTimeElement.textContent = ` ${formattedTime}`;
+        }
+        setInterval(updatecurrentUTCTime, 1000);
+
+    </script>
+</body>
+</html>
